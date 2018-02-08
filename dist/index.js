@@ -11,7 +11,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         define(factory);
     } else if (window) {
         // window - browser canon
-        window[name] = factory();
+        if (Object.prototype.toString.call(window.zhf).slice(8, -1).toLowerCase() !== 'object') {
+            window.zhf = {};
+        }
+        window.zhf[name] = factory();
     }
 })('keepDecimal', function () {
     /**

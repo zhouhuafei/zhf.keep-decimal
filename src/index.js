@@ -4,7 +4,10 @@
     } else if (typeof define === 'function' && define.amd) { // requirejs - amd canon
         define(factory);
     } else if (window) { // window - browser canon
-        window[name] = factory();
+        if (Object.prototype.toString.call(window.zhf).slice(8, -1).toLowerCase() !== 'object') {
+            window.zhf = {};
+        }
+        window.zhf[name] = factory();
     }
 })('keepDecimal', function () {
     /**
