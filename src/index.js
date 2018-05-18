@@ -22,7 +22,7 @@
         // 转成字符串
         value = value.toString();
         // 格式化成金额形式的正则
-        const format = /(?!\b)(?=(\d{3})+$)/;
+        const format = /(?!\b)(?=(\d{3})+$)/g;
         // 是否是负数
         const isNegative = value[0] === '-';
         // 匹配数字

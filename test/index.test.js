@@ -21,4 +21,5 @@ test(`保留几位小数`, () => {
     expect(keepDecimal('-0001.01', 3)).toEqual('-1.010');
     expect(keepDecimal('0001.01', 4)).toEqual('1.0100');
     expect(keepDecimal('10.2', 2)).toEqual('10.20');
+    expect(keepDecimal('1000000', 2, true)).toEqual('1,000,000.00');
 });

@@ -33,7 +33,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         // 转成字符串
         value = value.toString();
         // 格式化成金额形式的正则
-        var format = /(?!\b)(?=(\d{3})+$)/;
+        var format = /(?!\b)(?=(\d{3})+$)/g;
         // 是否是负数
         var isNegative = value[0] === '-';
         // 匹配数字
