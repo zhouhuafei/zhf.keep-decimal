@@ -16,7 +16,7 @@
      * @param {Number} place - 保留几位小数(默认两位)
      * @param {Boolean} isFormat - 是否格式化(默认格式化)
      * */
-    function keepDecimal(value = 0, place = 2, isFormat = true) {
+    function keepDecimal(value = 0, place = 2, isFormat = false) {
         const format = /(?!\b)(?=(\d{3})+$)/;
         let result = value;
         const baseNum = Math.pow(10, place);

@@ -26,7 +26,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     function keepDecimal() {
         var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
         var place = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
-        var isFormat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+        var isFormat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
         var format = /(?!\b)(?=(\d{3})+$)/;
         var result = value;
