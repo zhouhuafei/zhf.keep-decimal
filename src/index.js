@@ -32,7 +32,8 @@
         }
         arr[0] = Number(arr[0]).toString(); //  arr如果存在，则把数组里第一项中的，0000变成0，0001变成1，0123变成123
         const first = arr[0];
-        if (place === 0) { // 保留0位
+        if (place <= 0) { // 保留0位
+            place = 0;
             result = first;
         } else {
             let second = arr[1];

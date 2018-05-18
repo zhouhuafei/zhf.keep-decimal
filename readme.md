@@ -23,4 +23,6 @@ keepDecimal(10, 3); // '10.000'
 keepDecimal('-0001.01', 3); // '-1.010'
 keepDecimal('0001.01', 4); // '1.0100'
 keepDecimal('10.2', 2); // '10.20'
+keepDecimal('1000000', 2, true); // '1,000,000.00'
+keepDecimal('1000000.00', -1, true); // '1,000,000'
 ```
