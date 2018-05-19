@@ -5,6 +5,7 @@ test(`保留几位小数`, () => {
     expect(keepDecimal('')).toEqual('');
     expect(keepDecimal(0)).toEqual('0.00');
     expect(keepDecimal('0')).toEqual('0.00');
+    expect(keepDecimal('-0')).toEqual('0.00');
     expect(keepDecimal('哈哈')).toEqual('');
     expect(keepDecimal('1哈哈1')).toEqual('1.10');
     expect(keepDecimal('哈哈2')).toEqual('2.00');
