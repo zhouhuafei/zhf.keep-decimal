@@ -30,7 +30,6 @@ function keepDecimal() {
     }
     var isNegative = value[0] === '-';
     var arr = value.split('.');
-    console.log(arr);
     var first = arr[0];
     var result = '';
     if (place <= 0) {

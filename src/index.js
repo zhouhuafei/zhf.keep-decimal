@@ -23,7 +23,6 @@ function keepDecimal(value = '', place = 2, isFormat = false) {
     }
     const isNegative = value[0] === '-';
     const arr = value.split('.');
-    console.log(arr);
     const first = arr[0];
     let result = '';
     if (place <= 0) { // 保留0位，返回第一个
