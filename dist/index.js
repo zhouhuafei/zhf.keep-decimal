@@ -28,7 +28,9 @@ function keepDecimal() {
         // 处理后还为空，则返回空
         return '';
     }
+    var isNegative = value[0] === '-';
     var arr = value.split('.');
+    console.log(arr);
     var first = arr[0];
     var result = '';
     if (place <= 0) {
@@ -52,6 +54,9 @@ function keepDecimal() {
         }
         arr[1] = second;
         result = arr.join('.');
+    }
+    if (isNegative && Number(result) === 0) {
+        result = result.substring(1);
     }
     if (first.length > 3 && isFormat) {
         result = moneyFormat(result);

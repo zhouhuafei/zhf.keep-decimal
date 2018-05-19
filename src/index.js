@@ -21,7 +21,9 @@ function keepDecimal(value = '', place = 2, isFormat = false) {
     if (value === '') { // 处理后还为空，则返回空
         return '';
     }
+    const isNegative = value[0] === '-';
     const arr = value.split('.');
+    console.log(arr);
     const first = arr[0];
     let result = '';
     if (place <= 0) { // 保留0位，返回第一个
@@ -41,6 +43,9 @@ function keepDecimal(value = '', place = 2, isFormat = false) {
         }
         arr[1] = second;
         result = arr.join('.');
+    }
+    if (isNegative && Number(result) === 0) {
+        result = result.substring(1);
     }
     if (first.length > 3 && isFormat) {
         result = moneyFormat(result);
