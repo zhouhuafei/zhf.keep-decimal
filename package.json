@@ -1,6 +1,6 @@
 {
     "name": "zhf.keep-decimal",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "no description",
     "main": "dist/index.min.js",
     "scripts": {
@@ -36,5 +36,9 @@
         "gulp-uglify": "^3.0.0",
         "husky": "^0.14.3",
         "jest": "^22.1.1"
+    },
+    "dependencies": {
+        "zhf.money-format": "^1.0.1",
+        "zhf.str-get-num": "^1.0.0"
     }
 }
